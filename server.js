@@ -1,6 +1,3 @@
-// Require dotenv to load environment variables from .env file
-require('dotenv').config();
-
 const express = require('express');
 const app = express();
 const jwt = require('jsonwebtoken');
@@ -26,7 +23,6 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 app.use(cors());
 
 // MongoDB Connection
-const MONGODB_URI = process.env.MONGODB_URI;
 mongoose.connect('mongodb+srv://upscpriyanshu06:Priyanshu%40123@cluster0.6ua5tlk.mongodb.net/mydatabase?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
@@ -49,7 +45,7 @@ app.get("/", (req, res) => {
 });
 
 // Server Setup
-const PORT = process.env.PORT || 5000;
+const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server started at PORT ${PORT}`);
 });
