@@ -27,7 +27,7 @@ app.use(cors());
 
 // MongoDB Connection
 const MONGODB_URI = process.env.MONGODB_URI;
-mongoose.connect(`mongodb+srv://upscpriyanshu06:Priyanshu%40123@cluster0.6ua5tlk.mongodb.net/mydatabase?retryWrites=true&w=majority`, {
+mongoose.connect('mongodb+srv://upscpriyanshu06:Priyanshu%40123@cluster0.6ua5tlk.mongodb.net/mydatabase?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
