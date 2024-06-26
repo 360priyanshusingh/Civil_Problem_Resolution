@@ -11,7 +11,7 @@ function AdminPanel() {
 
     const handleLogout=(e)=>{
       e.preventDefault();
-      axios.get(`http://localhost:5000/admin/logout`)
+      axios.get(`${window.location.origin}/admin/logout`)
       .then((result)=>{
         if(result.data.Status ==='Logout successful'){
           alert("Admin Logout Successfull")

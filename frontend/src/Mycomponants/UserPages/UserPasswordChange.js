@@ -19,7 +19,7 @@ function UserPasswordChange() {
 			alert("ConfirmPassword does not match");
 			return 
 		}
-		axios.put('http://localhost:5000/user/changePassword',{currentPassword,newPassword}).
+		axios.put(`${window.location.origin}/user/changePassword`,{currentPassword,newPassword}).
 		then((result)=>{
 			console.log(result)
           if(result.data.message==='Password changed successfully'){

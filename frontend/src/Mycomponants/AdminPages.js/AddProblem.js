@@ -30,7 +30,7 @@ function AddProblem() {
 	  
 		console.log(formData);
 	  
-		axios.post(`http://localhost:5000/admin/craeteProblem`, formData, {
+		axios.post(`${window.location.origin}/admin/craeteProblem`, formData, {
 			headers: {
 				'Content-Type': 'multipart/form-data'
 			}

@@ -10,7 +10,7 @@ function UserPanel() {
 
     
    const getuser= async(id)=>{
-    axios.get(`http://localhost:5000/user/getuser/${id}`)
+    axios.get(`${window.location.origin}/user/getuser/${id}`)
     .then((result)=>{
         console.log(result.data)
         setUser(result.data.result)
@@ -22,7 +22,7 @@ function UserPanel() {
 
 useEffect(() => {
 axios
-  .get("http://localhost:5000/user/home")
+  .get(`${window.location.origin}/user/home`)
   .then((result) => {
     console.log(result.data);
     if (result.data && result.data.Status === "Success") {

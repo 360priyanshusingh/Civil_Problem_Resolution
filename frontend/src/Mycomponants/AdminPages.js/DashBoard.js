@@ -12,7 +12,7 @@ function DashBoard() {
     let index=1;
 
     const getAllUser =()=>{
-        axios.get('http://localhost:5000/user/getAllUser')
+        axios.get(`${window.location.origin}/user/getAllUser`)
         .then((result)=>{
           const {data}=result;
           console.log(data.result);
